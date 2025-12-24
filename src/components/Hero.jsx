@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.jpeg";
 
 const codeLines = [
   "const dev = () => build();",
@@ -52,7 +52,7 @@ function Hero() {
             lineHeight: 1.1,
           }}
         >
-          Teja Botsa
+          Raviteja Botsa
         </motion.h1>
 
         <motion.p

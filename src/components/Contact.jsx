@@ -1,10 +1,35 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_9i14cmr",
+        "template_cid772x",
+        formRef.current,
+        "0JA4S-xqqUpwCh0P0"
+      )
+      .then(
+        () => {
+          alert("Message sent successfully 🚀");
+          formRef.current.reset();
+        },
+        () => {
+          alert("Failed to send message ❌");
+        }
+      );
+  };
+
   return (
-    
     <section
+      id="contact"
       style={{
         minHeight: "100vh",
         padding: "120px 80px",
@@ -15,7 +40,6 @@ function Contact() {
         justifyContent: "center",
       }}
     >
-       
       <div style={{ maxWidth: "1100px", width: "100%" }}>
         {/* Header */}
         <motion.h2
@@ -29,7 +53,6 @@ function Contact() {
             marginBottom: "16px",
           }}
         >
-
           Contact
         </motion.h2>
 
@@ -55,7 +78,7 @@ function Contact() {
             gap: "80px",
           }}
         >
-          {/* LEFT — INFO & SOCIALS */}
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,10 +100,10 @@ function Contact() {
             <div style={{ marginBottom: "24px" }}>
               <p style={{ fontSize: "13px", color: "#64748b" }}>Email</p>
               <a
-                href="mailto:yourmail@gmail.com"
+                href="mailto:botsaraviteja@gmail.com"
                 style={{ color: "#cbd5f5", textDecoration: "none" }}
               >
-                yourmail@gmail.com
+                botsaraviteja@gmail.com
               </a>
             </div>
 
@@ -101,7 +124,6 @@ function Contact() {
               FOLLOW
             </p>
 
-            {/* SOCIAL ICONS */}
             <div style={{ display: "flex", gap: "22px" }}>
               <motion.a
                 whileHover={{ y: -4 }}
@@ -134,6 +156,8 @@ function Contact() {
 
           {/* RIGHT — FORM */}
           <motion.form
+            ref={formRef}
+            onSubmit={sendEmail}
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -145,22 +169,29 @@ function Contact() {
             }}
           >
             <input
+              name="name"
               type="text"
               placeholder="Your Name"
               className="contact-input"
+              required
             />
             <input
+              name="email"
               type="email"
               placeholder="Your Email"
               className="contact-input"
+              required
             />
             <textarea
+              name="message"
               rows="5"
               placeholder="Your Message"
               className="contact-input"
+              required
             />
 
             <motion.button
+              type="submit"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
               style={{

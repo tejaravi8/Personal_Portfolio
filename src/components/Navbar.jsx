@@ -29,7 +29,7 @@ function Navbar() {
     >
       {/* Logo */}
       <h2 style={{ fontWeight: "700", letterSpacing: "1px" }}>
-        TEJA<span style={{ color: "#38bdf8" }}>.</span>
+        RAVITEJA<span style={{ color: "#38bdf8" }}>.</span>
       </h2>
 
       {/* Menu */}
