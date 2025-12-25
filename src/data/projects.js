@@ -6,8 +6,9 @@ export const projects = [
     description:
       "A secure banking application that allows users to manage accounts, perform transactions, and view statements through a clean dashboard.",
     images: [
-      "/projects/profile.jpg",
-      "/projects/profile.jpg",
+      "/projects/login_page.png",
+      "/projects/user_dashboard.png",
+      "/projects/admin_dashboard.png",
     ],
     features: [
       "User authentication & role-based access",
@@ -19,31 +20,31 @@ export const projects = [
       "Designing secure workflows and handling transaction consistency.",
     learnings:
       "Learned backend validation, database relationships, and frontend-backend integration.",
-    github: "https://github.com/yourusername/digital-banking",
-    demo: "https://your-demo-link.com",
+    github: "https://github.com/tejaravi8/DigitalBank",
+    demo: "https://digitalbank-xseh.onrender.com/",
   },
-
   {
-    title: "Expense Tracker",
-    slug: "expense-tracker",
+    title: "Job Application Tracker",
+    slug: "job-tracker",
     role: "Frontend Developer",
     description:
-      "A responsive expense tracker to manage income and expenses with a clean UI.",
+      "A web application to track job applications, statuses, and follow-ups in one place.",
     images: [
-      "/projects/expense-1.png",
+      "/projects/Job Application Tracker.png",
+      "/projects/Job tracker dashboard.png",
     ],
-    features: [
-      "Add & delete expenses",
-      "Category-wise tracking",
-      "Persistent local storage",
-    ],
-    tech: ["React", "JavaScript", "CSS"],
+    features:[
+    "Add, edit & delete applications",
+    "Track application status (Applied, Interview, Offer)",
+    "Company & role-based organization",
+  ],
+    tech: ["JavaScript", "CSS", "HTML"],
     challenges:
-      "Managing state updates cleanly.",
+      "Handling dynamic form data and conditional UI rendering.",
     learnings:
-      "Improved component structuring and state management.",
-    github: "https://github.com/yourusername/expense-tracker",
-    demo: "https://your-demo-link.com",
+      "Improved form handling, state management, and UI organization.",
+    github: "https://github.com/tejaravi8/JobTracker",
+    demo: "https://tejaravi8.github.io/JobTracker/",
   },
   
 ];
